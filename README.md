@@ -9,13 +9,13 @@ Página web de presentación de **ScanDex**, una aplicación que escanea peluche
 - **Descarga**: acceso para obtener la app.
 
 ## Estructura
-
+```
 .
 ├── index.html       # Página principal
 ├── css/
 │   └── estilos.css  # Estilos
 └── README.md
-
+```
 
 ## Cómo usarlo
 
