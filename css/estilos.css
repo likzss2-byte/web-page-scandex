@@ -1,5 +1,4 @@
-
-
+/* ---------- Variables globales ---------- */
 :root {
   /* Paleta de colores scandex */
   --rojo: #ff0000;
@@ -28,6 +27,7 @@
 }
 
 
+/* ---------- Reset y estilos base ---------- */
 *,
 *::before,
 *::after {
@@ -88,6 +88,7 @@ a {
   color: var(--tinta);
 }
 
+/* Oculto visualmente pero accesible para lectores de pantalla */
 .solo-lectores {
   position: absolute;
   width: 1px;
@@ -98,6 +99,8 @@ a {
 }
 
 
+/* ---------- Placeholders (texto e imágenes pendientes) ---------- */
+/* Barras grises que simulan líneas de texto */
 .relleno {
   display: grid;
   gap: 0.6rem;
@@ -116,6 +119,7 @@ a {
   width: 60%;
 }
 
+/* Cajas con X que simulan imágenes pendientes */
 .marcador {
   display: grid;
   place-items: center;
@@ -138,6 +142,7 @@ a {
   background: var(--marcador);
 }
 
+/* Variantes de proporción */
 .marcador-vertical { aspect-ratio: 3 / 4; }
 .marcador-ancho { aspect-ratio: 16 / 10; }
 .marcador-panorama { aspect-ratio: 21 / 9; }
@@ -147,6 +152,7 @@ a {
 
 
 
+/* ---------- Navegación (barra superior en móvil) ---------- */
 .navegacion {
   position: sticky;
   top: 0;
@@ -210,6 +216,7 @@ a {
 }
 
 
+/* ---------- Estructura general de secciones ---------- */
 main {
   min-width: 0;
 }
@@ -227,6 +234,7 @@ main {
   font-family: var(--fuente-aplicacion);
 }
 
+/* ---------- Sección: Sobre la aplicación ---------- */
 .aplicacion-cabecera,
 .desarrollo {
   display: grid;
@@ -261,6 +269,7 @@ main {
   font-size: clamp(1.75rem, 3.5vw, 2.25rem);
 }
 
+/* Inspiración: enlaces a videos */
 .videos {
   display: grid;
   gap: 1.5rem;
@@ -284,6 +293,7 @@ main {
   font-weight: 600;
 }
 
+/* ---------- Sección: Sobre nosotros ---------- */
 .seccion-nosotros {
   font-family: var(--fuente-nosotros);
   background: var(--superficie);
@@ -304,6 +314,7 @@ main {
   margin-top: 1.5rem;
 }
 
+/* Tarjetas del equipo */
 .equipo {
   display: grid;
   gap: 2.5rem;
@@ -333,7 +344,8 @@ main {
   font-family: var(--fuente-base);
 }
 
-/* Descarga: imagen del teléfono a la izquierda, datos a la derecha */
+/* ---------- Sección: Descarga ---------- */
+/* Imagen del teléfono a la izquierda, datos a la derecha */
 .seccion-descarga {
   display: grid;
   gap: 3rem;
@@ -356,6 +368,7 @@ main {
   align-content: start;
 }
 
+/* Botón principal de descarga */
 .boton-descarga {
   justify-self: start;
   padding: 1rem 2rem;
@@ -378,6 +391,7 @@ main {
   transform: translateY(0);
 }
 
+/* Datos técnicos de la app */
 .datos {
   display: flex;
   flex-wrap: wrap;
@@ -399,6 +413,7 @@ main {
   color: var(--texto-suave);
 }
 
+/* Pasos de instalación */
 .instrucciones ol {
   display: grid;
   gap: 1rem;
@@ -414,6 +429,7 @@ main {
   margin-top: 0.35rem;
 }
 
+/* Mensaje de agradecimiento */
 .gracias {
   padding: 1.5rem;
   border-radius: 0.75rem;
@@ -434,7 +450,7 @@ main {
   margin-top: 0;
 }
 
-/* ---------- Pantallas medianas y grandes ---------- */
+/* ---------- Responsive: tablet (≥768px) ---------- */
 
 @media (min-width: 48rem) {
   html {
@@ -497,6 +513,7 @@ main {
   }
 }
 
+/* ---------- Responsive: escritorio (≥1024px), navegación pasa a barra lateral ---------- */
 @media (min-width: 64rem) {
   body {
     display: grid;
@@ -536,6 +553,7 @@ main {
   }
 }
 
+/* ---------- Accesibilidad: sin animaciones si el usuario lo pide ---------- */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
